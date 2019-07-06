@@ -18,3 +18,20 @@ jhipster official site says, JHipster is a development platform to generate, dev
 
 1. <b>Maven</b> ./mvnw (Linux/MacOS/Windows PowerShell) mvnw on Windows Cmd <br/>
    <b>Gradle</b> (./gradlew on Linux/MacOS/Windows PowerShell, gradlew on Windows Cmd).
+
+### Create entity
+
+entity sub-generator that creates full CRUD entities <br>
+jhipster entity <entityName> --[options]
+
+jhipster entity --help
+
+Options <br/>
+
+1. --table-name <table_name>
+2. --angular-suffix <suffix>
+3. --client-root-folder <folder-name>
+4. --regenerate
+5. --skip-server code.
+6. --db
+7. --skip-client
