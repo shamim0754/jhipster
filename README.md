@@ -35,3 +35,20 @@ Options <br/>
 5. --skip-server code.
 6. --db
 7. --skip-client
+
+### Create controller
+
+jhipster spring-controller <controllerName>
+
+### Create service
+
+jhipster spring-service <serviceName>
+
+### JDL(JHipster Domain Language)
+
+JDL allows to describe all your applications, deployments, entities and their relationships in a single file (or more than one)
+
+1. https://start.jhipster.tech/jdl-studio/
+2. JHipster IDE plugins/extensions(For Eclipse, VS Code and Atom)
+
+### Setting up existing project
