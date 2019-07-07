@@ -186,3 +186,7 @@ service PostCategory,Post with serviceClass
 4. Copy io.github.jhipster.web.rest.errors ,io.github.jhipster.rest.util,io.github.jhipster.service.filter,io.github.jhipster.service.QueryService,io.github.jhipster.service.Criteria ,io.github.jhipster.web.TestUtil from io.github.jhipster jar to your project
 
 Note : you can also above file copy from this repove com.itc.blog to your project
+
+### Integration Testing
+
+Jhipster generate integration testing for us.
