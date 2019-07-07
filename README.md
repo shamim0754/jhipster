@@ -14,6 +14,9 @@ jhipster official site says, JHipster is a development platform to generate, dev
 1. mkdir myapplication
 2. jhipster
 
+Another option
+https://start.jhipster.tech/#/
+
 ### Running Application
 
 1. <b>Maven</b> ./mvnw (Linux/MacOS/Windows PowerShell) mvnw on Windows Cmd <br/>
@@ -83,18 +86,61 @@ service PostCategory,Post with serviceClass
 
 ### Setting up existing project
 
-1. ```xml
+1. Setting jhipster environment
+2. ```xml
    <dependency>
        <groupId>io.github.jhipster</groupId>
        <artifactId>jhipster</artifactId>
-       <version>3.0.3</version>
+       <version>1.3,1</version>
        <type>pom</type>
    </dependency>
+
+   <dependency>
+    <groupId>io.springfox</groupId>
+    <artifactId>springfox-swagger2</artifactId>
+    <version>2.6.1</version>
+    <exclusions>
+        <exclusion>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </exclusion>
+        <exclusion>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct-jdk8</artifactId>
+        </exclusion>
+    </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-swagger-ui</artifactId>
+        <version>2.5.0</version>
+        <exclusions>
+            <exclusion>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>org.mapstruct</groupId>
+                <artifactId>mapstruct-jdk8</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-data-rest</artifactId>
+        <version>2.9.2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.zalando</groupId>
+        <artifactId>problem-spring-web</artifactId>
+        <version>0.23.0</version>
+    </dependency>
    ```
 
 ````
 
-2. copy .yo-re.json file to app root directory
+3. copy .yo-re.json file to app root directory
+
 
 ```json
 {
@@ -120,7 +166,7 @@ service PostCategory,Post with serviceClass
     "serviceDiscoveryType": false,
     "buildTool": "maven",
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "MDUwZjkyMjE2M2E1NTRjNTI3YzNjMjkyNWJmODk4ZDczOGQxNzMxY2UxMWM3MzZjZGQ1YTMzYTBkZjg3YTMzODYxZDFhYjUwNThkYzQ3NWJiMDJhZTgwZGFlZTMzNmU1MGZiYzNkZmFjNjFiMzExZGI5MDg0NjgyNzdkYWU4ODA=",
+    "jwtSecretKey": "MDUwZjkyMjE2M2E1NTRjNTI3YzNjMjkyNWJmODk4ZDczOGQxNzMxY2Ux",
     "useSass": true,
     "clientPackageManager": "npm",
     "clientFramework": "angularX",
@@ -136,3 +182,5 @@ service PostCategory,Post with serviceClass
   }
 }
 ````
+
+4. copy errors & util directory(from this repo) to your project

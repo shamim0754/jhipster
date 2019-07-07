@@ -1,0 +1,27 @@
+{
+    "name": "PostCategory",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "post",
+            "otherEntityRelationshipName": "bb",
+            "relationshipName": "aa"
+        }
+    ],
+    "changelogDate": "20190707044339",
+    "javadoc": "@author Md.shamim Miah\nDate : 12-07-2019",
+    "entityTableName": "post_category",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

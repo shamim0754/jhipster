@@ -1,0 +1,28 @@
+
+/**
+ *
+ * @author Md.shamim Miah
+ * Date : 12-07-2019
+ */
+
+entity PostCategory {
+    name String
+}
+entity Post {
+    title String,
+    body String
+}
+
+
+
+relationship OneToMany {
+  PostCategory{aa(name)} to Post{bb}
+}
+
+dto PostCategory,Post with mapstruct
+
+filter PostCategory
+
+paginate PostCategory,Post with pagination
+
+service PostCategory,Post with serviceClass
