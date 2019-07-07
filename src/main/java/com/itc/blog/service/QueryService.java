@@ -1,9 +1,9 @@
-package com.itc.erp.service;
+package com.ocmsbd.demo.service;
 
 
-import com.itc.erp.service.filter.Filter;
-import com.itc.erp.service.filter.RangeFilter;
-import com.itc.erp.service.filter.StringFilter;
+import com.ocmsbd.demo.service.filter.Filter;
+import com.ocmsbd.demo.service.filter.RangeFilter;
+import com.ocmsbd.demo.service.filter.StringFilter;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -80,16 +80,16 @@ public abstract class QueryService<ENTITY> {
                 result = result.and(this.greaterThan(metaclassFunction, filter.getGreaterThan()));
             }
 
-            if (filter.getGreaterOrEqualThan() != null) {
-                result = result.and(this.greaterThanOrEqualTo(metaclassFunction, filter.getGreaterOrEqualThan()));
+            if (filter.getGreaterThanOrEqual() != null) {
+                result = result.and(this.greaterThanOrEqualTo(metaclassFunction, filter.getGreaterThanOrEqual()));
             }
 
             if (filter.getLessThan() != null) {
                 result = result.and(this.lessThan(metaclassFunction, filter.getLessThan()));
             }
 
-            if (filter.getLessOrEqualThan() != null) {
-                result = result.and(this.lessThanOrEqualTo(metaclassFunction, filter.getLessOrEqualThan()));
+            if (filter.getLessThanOrEqual() != null) {
+                result = result.and(this.lessThanOrEqualTo(metaclassFunction, filter.getLessThanOrEqual()));
             }
 
             return result;
@@ -154,16 +154,16 @@ public abstract class QueryService<ENTITY> {
                 result = result.and(this.greaterThan(fused, filter.getGreaterThan()));
             }
 
-            if (filter.getGreaterOrEqualThan() != null) {
-                result = result.and(this.greaterThanOrEqualTo(fused, filter.getGreaterOrEqualThan()));
+            if (filter.getGreaterThanOrEqual() != null) {
+                result = result.and(this.greaterThanOrEqualTo(fused, filter.getGreaterThanOrEqual()));
             }
 
             if (filter.getLessThan() != null) {
                 result = result.and(this.lessThan(fused, filter.getLessThan()));
             }
 
-            if (filter.getLessOrEqualThan() != null) {
-                result = result.and(this.lessThanOrEqualTo(fused, filter.getLessOrEqualThan()));
+            if (filter.getLessThanOrEqual() != null) {
+                result = result.and(this.lessThanOrEqualTo(fused, filter.getLessThanOrEqual()));
             }
 
             return result;
