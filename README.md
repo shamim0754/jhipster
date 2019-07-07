@@ -183,4 +183,4 @@ service PostCategory,Post with serviceClass
 }
 ````
 
-4. copy errors & util directory(from this repo) to your project
+4. Copy com.ocmsbd.demo.web.rest.errors ,com.ocmsbd.demo.web.rest.util,com.itc.blog.service.filter,com.itc.blog.service.QueryService,com.itc.blog.service.Criteria directory(from this repo) to your project
