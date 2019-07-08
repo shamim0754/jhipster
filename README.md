@@ -17,6 +17,38 @@ jhipster official site says, JHipster is a development platform to generate, dev
 Another option
 https://start.jhipster.tech/#/
 
+Another option
+
+```json
+application {
+  config {
+    baseName blogApp
+    packageName com.itc.blog
+    applicationType monolith
+    databaseType    sql
+    devDatabaseType mysql
+    prodDatabaseType mysql
+    buildTool maven
+    cacheProvider   ehcache
+    enableHibernateCache    true
+    clientFramework angularX
+    jhiPrefix   false
+    enableTranslation   true
+    nativeLanguage  en
+    languages   [en, fr]
+    serviceDiscoveryType    false
+    messageBroker   false
+    searchEngine    false
+    serverPort  8080
+    websocket   spring-websocket
+    testFrameworks  [protractor]
+    skipClient  false
+    skipServer  false
+    skipUserManagement  false
+  }
+}
+```
+
 ### Running Application
 
 1. <b>Maven</b> ./mvnw (Linux/MacOS/Windows PowerShell) mvnw on Windows Cmd <br/>
@@ -51,6 +83,8 @@ jhipster spring-service <serviceName>
 
 JDL allows to describe all your applications, deployments, entities and their relationships in a single file (or more than one)
 
+### JDL file
+
 1. https://start.jhipster.tech/jdl-studio/
 2. JHipster IDE plugins/extensions(For Eclipse, VS Code and Atom)
 
@@ -83,6 +117,17 @@ paginate PostCategory,Post with pagination
 
 service PostCategory,Post with serviceClass
 ```
+
+`jhipster import-jdl <directory jdl file>`
+
+### UML tool
+
+Modelio can be downloaded for free https://www.modelio.org/.<br/>
+UML Designer<br/>
+GenMyModel<br/>
+
+Export file as xmi format <br>
+jhipster-uml <your_file.xmi> --db (sql | mongodb | cassandra)
 
 ### Setting up existing project
 
@@ -190,3 +235,11 @@ Note : you can also above file copy from this repove com.itc.blog to your projec
 ### Integration Testing
 
 Jhipster generate integration testing for us.
+
+### Upgrading an application
+
+jhipster upgrade<br>
+
+1. --verbose - Log each step of the upgrade process in detail
+2. --target-version=4.2.0 - Upgrade to the target version instead of the latest release, useful if a project is several versions behind
+3. --force - Run the upgrade sub-generator even if no new JHipster version is available
