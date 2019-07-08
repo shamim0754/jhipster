@@ -259,4 +259,14 @@ Enhance JHipster with new features using different languages and/or support<br>
 
 ### Jhipster module
 
+This allows to create third-party generators that have access to the JHipster variables and functions, and act like standard JHipster sub-generators.
+
 https://www.jhipster.tech/modules/marketplace/#/list
+
+Hooks
+JHipster will call certain hooks before and after some of its tasks, currently available and planned tasks are listed below.
+
+Post Entity creation hook
+Pre Entity creation hook [planned]
+Post App creation hook [planned]
+Pre App creation hook [planned]
