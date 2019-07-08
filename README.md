@@ -4,7 +4,7 @@ jhipster official site says, JHipster is a development platform to generate, dev
 
 ### Setting environment
 
-1. Install Java >8
+1. Install Java >=8
 2. Install Node.js
 3. Install JHipster: npm install -g generator-jhipster
 4. (optional) If you want to use a module or a blueprint (for instance from the JHipster Marketplace), install Yeoman: npm install -g yo
@@ -233,7 +233,7 @@ jhipster-uml <your_file.xmi> --db (sql | mongodb | cassandra)
 
 4. Copy io.github.jhipster.web.rest.errors ,io.github.jhipster.rest.util,io.github.jhipster.service.filter,io.github.jhipster.service.QueryService,io.github.jhipster.service.Criteria ,io.github.jhipster.web.TestUtil from io.github.jhipster jar to your project
 
-Note : you can also above file copy from this repove com.itc.blog to your project
+Note : you can also above file copy from this repo to your project
 
 ### Integration Testing
 
