@@ -129,6 +129,7 @@ UML Designer(http://www.umldesigner.org/)<br/>
 GenMyModel(https://www.genmymodel.com/)<br/>
 
 Export file as xmi format <br>
+npm install -g jhipster-uml<br>
 jhipster-uml <your_file.xmi> --db (sql | mongodb | cassandra)
 
 ### Setting up existing project
