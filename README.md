@@ -53,6 +53,8 @@ application {
 
 1. <b>Maven</b> ./mvnw (Linux/MacOS/Windows PowerShell) mvnw on Windows Cmd <br/>
    <b>Gradle</b> (./gradlew on Linux/MacOS/Windows PowerShell, gradlew on Windows Cmd).
+   For proudction
+   ./mvnw -Pprod package
 
 ### Create entity
 
@@ -123,8 +125,8 @@ service PostCategory,Post with serviceClass
 ### UML tool
 
 Modelio can be downloaded for free https://www.modelio.org/.<br/>
-UML Designer<br/>
-GenMyModel<br/>
+UML Designer(http://www.umldesigner.org/)<br/>
+GenMyModel(https://www.genmymodel.com/)<br/>
 
 Export file as xmi format <br>
 jhipster-uml <your_file.xmi> --db (sql | mongodb | cassandra)
@@ -236,6 +238,8 @@ Note : you can also above file copy from this repove com.itc.blog to your projec
 
 Jhipster generate integration testing for us.
 
+To run `mvn clean verify`
+
 ### Upgrading an application
 
 jhipster upgrade<br>
@@ -243,3 +247,16 @@ jhipster upgrade<br>
 1. --verbose - Log each step of the upgrade process in detail
 2. --target-version=4.2.0 - Upgrade to the target version instead of the latest release, useful if a project is several versions behind
 3. --force - Run the upgrade sub-generator even if no new JHipster version is available
+
+### Jhipster blueprint
+
+Kotlin,Vue.js,.net <br/>
+
+Enhance JHipster with new features using different languages and/or support<br>
+
+`npm i -g generator-jhipster-kotlin`
+`jhipster --blueprint <blueprint name>`
+
+### Jhipster module
+
+https://www.jhipster.tech/modules/marketplace/#/list
