@@ -271,3 +271,68 @@ Post Entity creation hook
 Pre Entity creation hook [planned]
 Post App creation hook [planned]
 Pre App creation hook [planned]
+
+### Swagger setting for server code project ###
+1. Add SwaggerConfiguration into config dir
+
+```java
+package com.javaaround.leave.config;
+
+import io.github.jhipster.config.apidoc.customizer.SwaggerCustomizer;
+import org.springframework.context.annotation.Configuration;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.service.ApiKey;
+import springfox.documentation.service.AuthorizationScope;
+import springfox.documentation.service.SecurityReference;
+import springfox.documentation.spi.service.contexts.SecurityContext;
+import springfox.documentation.spring.web.plugins.Docket;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+import static java.util.Collections.singletonList;
+
+@Configuration
+public class SwaggerConfiguration implements SwaggerCustomizer {
+    @Override
+    public void customize(Docket docket) {
+        docket.securitySchemes(singletonList(apiKey()))
+            .securityContexts(singletonList(
+                SecurityContext.builder()
+                    .securityReferences(
+                        singletonList(SecurityReference.builder()
+                            .reference("Authorization")
+                            .scopes(new AuthorizationScope[0])
+                            .build()
+                        )
+                    )
+                    .build())
+            );
+    }
+
+    private ApiKey apiKey() {
+        return new ApiKey("Authorization", "Authorization", "header");
+
+    }
+    
+}
+
+```
+
+2. add dependency
+
+```xml
+<dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+```
+
+3. Update SecurityConfiguration(ingore)
+
+```java
+.antMatchers("/swagger-ui.html")
+```
+
