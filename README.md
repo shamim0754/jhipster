@@ -336,3 +336,5 @@ public class SwaggerConfiguration implements SwaggerCustomizer {
 .antMatchers("/swagger-ui.html")
 ```
 
+4. browse http://localhost:8080/swagger-ui.html
+
