@@ -330,11 +330,5 @@ public class SwaggerConfiguration implements SwaggerCustomizer {
         </dependency>
 ```
 
-3. Update SecurityConfiguration(ingore)
-
-```java
-.antMatchers("/swagger-ui.html")
-```
-
-4. browse http://localhost:8080/swagger-ui.html
+3. browse http://localhost:8080/swagger-ui.html
 
