@@ -332,3 +332,19 @@ public class SwaggerConfiguration implements SwaggerCustomizer {
 
 3. browse http://localhost:8080/swagger-ui.html
 
+### swagger profile##
+at securityconfiguration.java
+
+
+    @Autowired
+    private Environment environment;
+ .antMatchers(stream(this.environment.getActiveProfiles()).filter(s -> s.equals("swagger2")).findFirst().isPresent() ? "/fake" : "/swagger-ui.html").authenticated()
+
+
+update SwaggerConfigration
+@Profile("swagger2)
+
+applicaton-dev.yml
+
+add include
+-swagger2
